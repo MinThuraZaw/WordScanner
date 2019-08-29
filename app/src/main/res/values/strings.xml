@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">WordScanner</string>
+    <string name="main_title">Let\'s take an image to scan!</string>
+</resources>

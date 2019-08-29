@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_camera"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/divider"
+        android:clickable="true"
+        android:onClick="onCameraClick"
+        android:background="@drawable/main_layout_corner">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/camera_logo"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#DDDDDD"
+        android:layout_centerHorizontal="true"
+        android:layout_width="1dp"
+        android:layout_height="64dp">
+
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/layout_gallery"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/divider"
+        android:clickable="true"
+        android:onClick="onGalleryClick"
+        android:background="@drawable/main_layout_corner">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/gallery"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_below="@id/layout_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_no_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No Image Here!"
+            android:textSize="16sp"
+            android:visibility="visible"
+            android:textColor="#909090"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_main"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_scan"
+        android:layout_width="200dp"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_scan_corner"
+        android:text="Scan"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+</RelativeLayout>
